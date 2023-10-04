@@ -1,22 +1,16 @@
 *** Settings ***
 Library    SeleniumLibrary
-Variables    ../PageObjects/LoginPage_Objects.py
-
-*** Variables ***
-${URL}  https:/admin-demo.nopcommerce.com/login
-${Browser}  Edge
+Variables   ../PageObjects/LoginPage_Objects.py
 
 *** Keywords ***
-BrowserOpen
-    open browser    ${Browser}      ${URL}
-    maximize browser window
-    sleep    2
-
 Login_Info
-    [Arguments]   ${email}    ${pa}
-    input text  ${Email}  ${email}
-    input text  ${Password}   ${pa}
-    click element  ${Login}
+    [Arguments]   ${eml}    ${pas}
+    Clear Element Text    ${Email}
+    Input Text    ${Email}    ${eml}
+    Clear Element Text    ${Password}
+    Input Text    ${Password}    ${pas}
+    Click Element    ${Login}
+    Sleep    1
 
 HomePage_Title
     page should contain    Your store. Login
@@ -28,9 +22,4 @@ Error_Message
     page should contain    Login was unsuccessful
 
 Logout
-    click element    ${Logout}
-
-BrowserClose
-    sleep    2
-    close browser
-    close all browsers
+    Click Element    ${Logout}

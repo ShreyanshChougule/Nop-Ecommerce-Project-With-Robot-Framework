@@ -1,4 +1,4 @@
-Email = "ID:Email"
-Password = "ID:Password"
-Login = "XPATH://button[@type='submit']"
-Logout = "LINK_TEXT:Logout"
+Email = "xpath://input[@id='Email']"
+Password = "xpath://input[@id='Password']"
+Login = "xpath://button[@type='submit']"
+Logout = "xpath://a[normalize-space()='Logout']"

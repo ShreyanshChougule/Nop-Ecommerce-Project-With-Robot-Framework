@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231003 16:52:39.033" rpa="false" schemaversion="4">
+<suite id="s1" name="T" source="C:\Users\Tejas\Nop Ecommerce Project With Robot Framework\TestCases\T.robot">
+<test id="s1-t1" name="Demo" line="10">
+<kw name="Get Chromedriver Path" library="BrowserName">
+<var>${chromedriver_path}</var>
+<msg timestamp="20231003 16:52:42.214" level="INFO">====== WebDriver manager ======</msg>
+<msg timestamp="20231003 16:52:59.876" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg timestamp="20231003 16:53:05.930" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg timestamp="20231003 16:53:07.585" level="INFO">Driver [C:\Users\Tejas\.wdm\drivers\chromedriver\win64\117.0.5938.92\chromedriver-win32/chromedriver.exe] found in cache</msg>
+<msg timestamp="20231003 16:53:07.585" level="INFO">${chromedriver_path} = C:\Users\Tejas\.wdm\drivers\chromedriver\win64\117.0.5938.92\chromedriver-win32/chromedriver.exe</msg>
+<status status="PASS" starttime="20231003 16:52:42.214" endtime="20231003 16:53:07.585"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>chrome</arg>
+<arg>executable_path=${chromedriver_path}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20231003 16:53:07.585" level="INFO">Creating an instance of the chrome WebDriver.</msg>
+<msg timestamp="20231003 16:53:07.585" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231003 16:53:07.585" level="FAIL">TypeError: 'module' object is not callable</msg>
+<status status="FAIL" starttime="20231003 16:53:07.585" endtime="20231003 16:53:07.747"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>www.google.com</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" starttime="20231003 16:53:07.747" endtime="20231003 16:53:07.747"/>
+</kw>
+<status status="FAIL" starttime="20231003 16:52:42.214" endtime="20231003 16:53:07.747">TypeError: 'module' object is not callable</status>
+</test>
+<status status="FAIL" starttime="20231003 16:52:39.048" endtime="20231003 16:53:07.747"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="T">T</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

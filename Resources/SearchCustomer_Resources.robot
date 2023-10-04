@@ -1,20 +1,24 @@
 *** Settings ***
 Library    SeleniumLibrary
-Variables    ../PageObjects/SearchCustomer_Objects.py
+Variables   ../PageObjects/SearchCustomer_Objects.py
 
-*** Variables ***
+
 *** Keywords ***
 set_email
-    [Arguments]     ${email}
-    input text    ${Email}    ${email}
+    [Arguments]    ${mail_id}
+    input text    ${Email}    ${mail_id}
 
 set_firstname
-    [Arguments]     ${fname}
-    Input Text    ${Firs_Name}    ${fname}
+    [Arguments]    ${Fname}
+    Input Text    ${Firs_Name}    ${Fname}
 
 set_lastname
-    [Arguments]     ${Lname}
+    [Arguments]    ${Lname}
     Input Text    ${Last_Name}    ${Lname}
 
-click_Search
+click_search
     Click Element    ${Search}
+
+Find_Data_in_Table
+    [Arguments]   ${mail_id}
+    Table Column Should Contain    ${Table}    2    ${mail_id}
