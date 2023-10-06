@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231004 16:26:13.730" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231006 11:46:22.251" rpa="false" schemaversion="4">
 <suite id="s1" name="5.SearchCustomer" source="C:\Users\Tejas\Nop Ecommerce Project With Robot Framework\TestCases\5.SearchCustomer.robot">
 <kw name="BrowserOpen" library="Browser_Resources" type="SETUP">
 <kw name="Get Driver" library="conftest">
 <var>${driver_path}</var>
-<msg timestamp="20231004 16:26:16.847" level="INFO">====== WebDriver manager ======</msg>
-<msg timestamp="20231004 16:26:25.317" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
-<msg timestamp="20231004 16:26:31.968" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
-<msg timestamp="20231004 16:26:33.476" level="INFO">Driver [C:\Users\Tejas\.wdm\drivers\chromedriver\win64\117.0.5938.92\chromedriver-win32/chromedriver.exe] found in cache</msg>
-<msg timestamp="20231004 16:26:33.476" level="INFO">${driver_path} = C:\Users\Tejas\.wdm\drivers\chromedriver\win64\117.0.5938.92\chromedriver-win32/chromedriver.exe</msg>
-<status status="PASS" starttime="20231004 16:26:16.847" endtime="20231004 16:26:33.476"/>
+<msg timestamp="20231006 11:46:22.889" level="INFO">====== WebDriver manager ======</msg>
+<msg timestamp="20231006 11:46:24.900" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg timestamp="20231006 11:46:26.015" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg timestamp="20231006 11:46:26.365" level="INFO">Driver [C:\Users\Tejas\.wdm\drivers\chromedriver\win64\117.0.5938.149\chromedriver-win32/chromedriver.exe] found in cache</msg>
+<msg timestamp="20231006 11:46:26.365" level="INFO">${driver_path} = C:\Users\Tejas\.wdm\drivers\chromedriver\win64\117.0.5938.149\chromedriver-win32/chromedriver.exe</msg>
+<status status="PASS" starttime="20231006 11:46:22.889" endtime="20231006 11:46:26.365"/>
 </kw>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <arg>${Browser}</arg>
 <arg>executable_path=${driver_path}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231004 16:26:33.493" level="INFO">Opening browser 'Chrome' to base url 'https:/admin-demo.nopcommerce.com/login'.</msg>
-<status status="PASS" starttime="20231004 16:26:33.476" endtime="20231004 16:26:53.529"/>
+<msg timestamp="20231006 11:46:26.365" level="INFO">Opening browser 'Chrome' to base url 'https:/admin-demo.nopcommerce.com/login'.</msg>
+<status status="PASS" starttime="20231006 11:46:26.365" endtime="20231006 11:46:33.651"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231004 16:26:53.530" endtime="20231004 16:26:53.879"/>
+<status status="PASS" starttime="20231006 11:46:33.651" endtime="20231006 11:46:33.773"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231004 16:26:55.881" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20231004 16:26:53.879" endtime="20231004 16:26:55.881"/>
+<msg timestamp="20231006 11:46:35.775" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231006 11:46:33.774" endtime="20231006 11:46:35.775"/>
 </kw>
-<status status="PASS" starttime="20231004 16:26:16.847" endtime="20231004 16:26:55.881"/>
+<status status="PASS" starttime="20231006 11:46:22.889" endtime="20231006 11:46:35.775"/>
 </kw>
-<test id="s1-t1" name="Test_SearchCustomer_By_Email" line="16">
+<test id="s1-t1" name="Test_SearchCustomer_By_Name" line="34">
 <kw name="Log" library="BuiltIn">
-<arg>Test Search Customer Start</arg>
+<arg>Test Search Customer By Name is Start</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20231004 16:26:55.884" level="INFO">Test Search Customer Start</msg>
-<status status="PASS" starttime="20231004 16:26:55.884" endtime="20231004 16:26:55.884"/>
+<msg timestamp="20231006 11:46:35.779" level="INFO">Test Search Customer By Name is Start</msg>
+<status status="PASS" starttime="20231006 11:46:35.779" endtime="20231006 11:46:35.779"/>
 </kw>
 <kw name="Login_Info" library="Login_Resources">
 <arg>${eml}</arg>
@@ -44,106 +44,115 @@
 <kw name="Clear Element Text" library="SeleniumLibrary">
 <arg>${Email}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20231004 16:26:55.886" endtime="20231004 16:26:56.310"/>
+<status status="PASS" starttime="20231006 11:46:35.783" endtime="20231006 11:46:35.909"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${Email}</arg>
 <arg>${eml}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231004 16:26:56.313" level="INFO">Typing text 'admin@yourstore.com' into text field 'xpath://input[@id='Email']'.</msg>
-<status status="PASS" starttime="20231004 16:26:56.311" endtime="20231004 16:26:56.577"/>
+<msg timestamp="20231006 11:46:35.910" level="INFO">Typing text 'admin@yourstore.com' into text field 'xpath://input[@id='Email']'.</msg>
+<status status="PASS" starttime="20231006 11:46:35.909" endtime="20231006 11:46:36.099"/>
 </kw>
 <kw name="Clear Element Text" library="SeleniumLibrary">
 <arg>${Password}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20231004 16:26:56.577" endtime="20231004 16:26:56.661"/>
+<status status="PASS" starttime="20231006 11:46:36.099" endtime="20231006 11:46:36.182"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${Password}</arg>
 <arg>${pas}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231004 16:26:56.663" level="INFO">Typing text 'admin' into text field 'xpath://input[@id='Password']'.</msg>
-<status status="PASS" starttime="20231004 16:26:56.661" endtime="20231004 16:26:56.805"/>
+<msg timestamp="20231006 11:46:36.185" level="INFO">Typing text 'admin' into text field 'xpath://input[@id='Password']'.</msg>
+<status status="PASS" starttime="20231006 11:46:36.183" endtime="20231006 11:46:36.313"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${Login}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231004 16:26:56.806" level="INFO">Clicking element 'xpath://button[@type='submit']'.</msg>
-<status status="PASS" starttime="20231004 16:26:56.805" endtime="20231004 16:27:14.401"/>
+<msg timestamp="20231006 11:46:36.315" level="INFO">Clicking element 'xpath://button[@type='submit']'.</msg>
+<status status="PASS" starttime="20231006 11:46:36.314" endtime="20231006 11:46:43.760"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231004 16:27:15.402" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20231004 16:27:14.402" endtime="20231004 16:27:15.402"/>
+<msg timestamp="20231006 11:46:44.762" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231006 11:46:43.760" endtime="20231006 11:46:44.762"/>
 </kw>
-<status status="PASS" starttime="20231004 16:26:55.886" endtime="20231004 16:27:15.402"/>
+<status status="PASS" starttime="20231006 11:46:35.781" endtime="20231006 11:46:44.762"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Loged In</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20231004 16:27:15.403" level="INFO">Loged In</msg>
-<status status="PASS" starttime="20231004 16:27:15.403" endtime="20231004 16:27:15.403"/>
+<msg timestamp="20231006 11:46:44.764" level="INFO">Loged In</msg>
+<status status="PASS" starttime="20231006 11:46:44.763" endtime="20231006 11:46:44.764"/>
 </kw>
 <kw name="Click_Customer" library="AddCustomer_Resources">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${Customers}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231004 16:27:15.406" level="INFO">Clicking element 'xpath://a[@href='#']//p[contains(text(),'Customers')]'.</msg>
-<status status="PASS" starttime="20231004 16:27:15.404" endtime="20231004 16:27:15.605"/>
+<msg timestamp="20231006 11:46:44.770" level="INFO">Clicking element 'xpath://a[@href='#']//p[contains(text(),'Customers')]'.</msg>
+<status status="PASS" starttime="20231006 11:46:44.767" endtime="20231006 11:46:44.908"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${Sub_Customers}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231004 16:27:15.607" level="INFO">Clicking element 'xpath://a[@href='/Admin/Customer/List']//p[contains(text(),'Customers')]'.</msg>
-<status status="PASS" starttime="20231004 16:27:15.605" endtime="20231004 16:27:22.529"/>
+<msg timestamp="20231006 11:46:44.909" level="INFO">Clicking element 'xpath://a[@href='/Admin/Customer/List']//p[contains(text(),'Customers')]'.</msg>
+<status status="PASS" starttime="20231006 11:46:44.909" endtime="20231006 11:46:49.164"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231004 16:27:23.530" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20231004 16:27:22.530" endtime="20231004 16:27:23.530"/>
+<msg timestamp="20231006 11:46:50.167" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231006 11:46:49.165" endtime="20231006 11:46:50.167"/>
 </kw>
-<status status="PASS" starttime="20231004 16:27:15.404" endtime="20231004 16:27:23.530"/>
+<status status="PASS" starttime="20231006 11:46:44.765" endtime="20231006 11:46:50.167"/>
 </kw>
-<kw name="set_email" library="SearchCustomer_Resources">
-<arg>${mail_id}</arg>
+<kw name="set_firstname" library="SearchCustomer_Resources">
+<arg>${Fname}</arg>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${Email}</arg>
-<arg>${mail_id}</arg>
+<arg>${Firs_Name}</arg>
+<arg>${Fname}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231004 16:27:23.534" level="INFO">Typing text 'james_pan@nopCommerce.com' into text field 'xpath://input[@id='Email']'.</msg>
-<msg timestamp="20231004 16:27:29.485" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20231004 16:27:29.487" level="FAIL">Element with locator 'xpath://input[@id='Email']' not found.</msg>
-<status status="FAIL" starttime="20231004 16:27:23.532" endtime="20231004 16:27:29.964"/>
+<msg timestamp="20231006 11:46:50.172" level="INFO">Typing text 'Hari' into text field 'xpath://*[@id='SearchFirstName']'.</msg>
+<status status="PASS" starttime="20231006 11:46:50.169" endtime="20231006 11:46:50.370"/>
 </kw>
-<status status="FAIL" starttime="20231004 16:27:23.531" endtime="20231004 16:27:29.964"/>
+<status status="PASS" starttime="20231006 11:46:50.168" endtime="20231006 11:46:50.370"/>
 </kw>
-<kw name="click_search" library="SearchCustomer_Resources">
-<status status="NOT RUN" starttime="20231004 16:27:29.965" endtime="20231004 16:27:29.966"/>
+<kw name="set_lastname" library="SearchCustomer_Resources">
+<arg>${Lname}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Last_Name}</arg>
+<arg>${Lname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231006 11:46:50.373" level="INFO">Typing text 'Babu' into text field 'xpath://input[@id='LastName']'.</msg>
+<msg timestamp="20231006 11:46:50.648" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231006 11:46:50.648" level="FAIL">Element with locator 'xpath://input[@id='LastName']' not found.</msg>
+<status status="FAIL" starttime="20231006 11:46:50.372" endtime="20231006 11:46:50.654"/>
+</kw>
+<status status="FAIL" starttime="20231006 11:46:50.371" endtime="20231006 11:46:50.655"/>
+</kw>
+<kw name="click_sub_search" library="SearchCustomer_Resources">
+<status status="NOT RUN" starttime="20231006 11:46:50.656" endtime="20231006 11:46:50.656"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>Searching Records Through Eamil by Given Data :: ${mail_id}</arg>
+<arg>Searching Records Through Name by Given Data :: ${Fname</arg>
+<arg>and</arg>
+<arg>Lname}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20231004 16:27:29.966" endtime="20231004 16:27:29.967"/>
+<status status="NOT RUN" starttime="20231006 11:46:50.656" endtime="20231006 11:46:50.656"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20231004 16:27:29.968" endtime="20231004 16:27:29.968"/>
-</kw>
-<kw name="Find_Data_in_Table" library="SearchCustomer_Resources">
-<arg>${mail_id}</arg>
-<status status="NOT RUN" starttime="20231004 16:27:29.969" endtime="20231004 16:27:29.969"/>
+<status status="NOT RUN" starttime="20231006 11:46:50.657" endtime="20231006 11:46:50.657"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>Giver Record Found in Database</arg>
+<arg>Giver Record Found in</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20231004 16:27:29.970" endtime="20231004 16:27:29.970"/>
+<status status="NOT RUN" starttime="20231006 11:46:50.658" endtime="20231006 11:46:50.658"/>
 </kw>
-<status status="FAIL" starttime="20231004 16:26:55.882" endtime="20231004 16:27:29.995">Element with locator 'xpath://input[@id='Email']' not found.</status>
+<status status="FAIL" starttime="20231006 11:46:35.775" endtime="20231006 11:46:50.658">Element with locator 'xpath://input[@id='LastName']' not found.</status>
 </test>
-<status status="FAIL" starttime="20231004 16:26:13.730" endtime="20231004 16:27:29.998"/>
+<status status="FAIL" starttime="20231006 11:46:22.266" endtime="20231006 11:46:50.661"/>
 </suite>
 <statistics>
 <total>

@@ -1,5 +1,7 @@
 Email = "xpath://input[@id='SearchEmail']"
 Firs_Name = "xpath://*[@id='SearchFirstName']"
 Last_Name = "xpath://*[@id='SearchLastName']"
-Search = "xpath://*[@id='search-customers']/i"
+Angle_Downn = "xpath://i[@class='far fa-angle-down']"
+Search = "xpath://div[@class='search-text']"
+Sub_Search = "xpath://*[@id='search-customers']/i"
 Table = "xpath://*[@id='customers-grid']/tbody/tr/td[2]"
